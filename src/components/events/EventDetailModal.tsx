@@ -109,7 +109,7 @@ export function EventDetailModal({
           updates: [newUpdate, ...event.updates],
         };
         onUpdateEvent(updated);
-        
+
         await supabase.from("event_confirmations").insert({
           event_id: event.id,
           update_id: data.id,
@@ -132,7 +132,7 @@ export function EventDetailModal({
       className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/80 backdrop-blur-sm overflow-y-auto"
       onClick={onClose}
     >
-      <div 
+      <div
         className="relative w-full max-w-2xl rounded-[2rem] border border-border-subtle bg-surface shadow-2xl overflow-hidden my-8"
         onClick={(e) => e.stopPropagation()}
       >

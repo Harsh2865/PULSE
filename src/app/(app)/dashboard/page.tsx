@@ -93,7 +93,7 @@ export default async function DashboardPage() {
         <h2 id="next-move-title" className="sr-only">Your Next Move</h2>
         <div className="relative overflow-hidden rounded-3xl border border-warning/30 bg-surface p-6 sm:p-8 shadow-2xl shadow-warning/5 group hover:border-warning/50 transition-colors">
           <div className="absolute top-0 right-0 -mt-16 -mr-16 h-64 w-64 rounded-full bg-warning/10 blur-3xl transition-opacity group-hover:bg-warning/20" />
-          
+
           <div className="relative z-10 flex items-center gap-2 mb-4">
             <span className="rounded-full bg-danger/10 border border-danger/20 px-3 py-1 text-[10px] font-black tracking-widest text-danger flex items-center gap-1.5 uppercase">
               <Flame className="h-3.5 w-3.5 text-danger" />

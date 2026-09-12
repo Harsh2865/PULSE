@@ -65,11 +65,11 @@ export default function PlannerPage() {
   async function handleToggleSession(sessionId: string, markCompleted: boolean) {
     if (!plan || !userId) return;
     const supabase = createClient();
-    
+
     // Determine what we're updating
     const sessionToUpdate = plan.schedule.find(s => s.id === sessionId);
     if (!sessionToUpdate) return;
-    
+
     const newCompleted = markCompleted ? !sessionToUpdate.completed : false;
     const newMissed = markCompleted ? false : !sessionToUpdate.missed;
 
@@ -102,10 +102,10 @@ export default function PlannerPage() {
   async function handleConfidenceChange(topicId: string, newConfidence: number) {
     if (!plan || !userId || isUpdatingConfidence) return;
     setIsUpdatingConfidence(true);
-    
+
     try {
       const supabase = createClient();
-      
+
       const { error: confError } = await updateTopicConfidence(supabase, topicId, newConfidence);
       if (confError) {
         alert("Failed to update topic confidence.");
@@ -115,9 +115,9 @@ export default function PlannerPage() {
       const nextTopics = plan.topics.map((t) =>
         t.id === topicId ? { ...t, confidence: newConfidence } : t,
       );
-      
+
       const nextSchedule = generateSchedule(nextTopics, plan.daily_available_minutes);
-      
+
       const { error: schedError } = await saveNewSchedule(supabase, userId, nextSchedule);
       if (schedError) {
         alert("Failed to save new schedule.");
@@ -197,9 +197,9 @@ export default function PlannerPage() {
 
   return (
     <div className="space-y-6">
-      <CreatePlanModal 
-        isOpen={isCreateModalOpen} 
-        onClose={() => setIsCreateModalOpen(false)} 
+      <CreatePlanModal
+        isOpen={isCreateModalOpen}
+        onClose={() => setIsCreateModalOpen(false)}
         onSuccess={() => {
           setIsCreateModalOpen(false);
           setPlan(null); // trigger skeleton loader briefly
@@ -233,7 +233,7 @@ export default function PlannerPage() {
               </span>
             )}
           </Link>
-          
+
           <button
             onClick={() => setIsCreateModalOpen(true)}
             className="inline-flex items-center gap-2 rounded-xl bg-foreground px-5 py-3 text-sm font-bold text-background shadow-lg hover:scale-[1.02] hover:bg-foreground/90 transition-all"

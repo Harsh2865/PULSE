@@ -286,7 +286,7 @@ export async function createNewExamPlan(
     let dayOffset = 0;
     if (s.scheduled_day === "Tomorrow") dayOffset = 1;
     else if (s.scheduled_day.startsWith("Day ")) dayOffset = parseInt(s.scheduled_day.replace("Day ", "")) - 1;
-    
+
     const schedDate = new Date(today);
     schedDate.setDate(schedDate.getDate() + dayOffset);
 
@@ -325,7 +325,7 @@ export async function saveNewSchedule(supabase: SupabaseClient, userId: string, 
     let dayOffset = 0;
     if (s.scheduled_day === "Tomorrow") dayOffset = 1;
     else if (s.scheduled_day.startsWith("Day ")) dayOffset = parseInt(s.scheduled_day.replace("Day ", "")) - 1;
-    
+
     const schedDate = new Date(today);
     schedDate.setDate(schedDate.getDate() + dayOffset);
 

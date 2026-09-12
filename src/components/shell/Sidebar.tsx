@@ -49,11 +49,11 @@ export function Sidebar() {
                       {active && isCollapsed && (
                         <div className="absolute left-0 top-1/2 -mt-2 h-4 w-1 rounded-r-full bg-accent shadow-[0_0_8px_var(--color-accent)]" />
                       )}
-                      <item.icon 
+                      <item.icon
                         className={`h-[18px] w-[18px] shrink-0 transition-transform duration-200 ${
                           active ? "scale-110" : "group-hover:scale-110"
-                        }`} 
-                        aria-hidden 
+                        }`}
+                        aria-hidden
                       />
                       {!isCollapsed && <span className="flex-1 tracking-wide">{item.label}</span>}
                       {!isCollapsed && !item.live && (

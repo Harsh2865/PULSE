@@ -57,7 +57,7 @@ export function RecapDetailModal({
       className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/80 backdrop-blur-sm overflow-y-auto"
       onClick={onClose}
     >
-      <div 
+      <div
         className="relative w-full max-w-2xl rounded-[2rem] border border-border-subtle bg-surface shadow-2xl p-6 sm:p-10 space-y-8 my-8"
         onClick={(e) => e.stopPropagation()}
       >

@@ -2,7 +2,7 @@
 -- Description: Audit record for 'event-posters' and 'class-notes' buckets.
 
 -- AUDIT FINDING:
--- At this point in time, the PULSE application does NOT natively perform file uploads. 
+-- At this point in time, the PULSE application does NOT natively perform file uploads.
 -- Both posters and class notes are handled via external URLs (e.g. Google Drive, Unsplash, Imgur)
 -- submitted through standard <input type="url"> fields.
 

@@ -30,7 +30,7 @@ export function CreateEventModal({
       setError("Please fill in the title, date, and location.");
       return;
     }
-    
+
     setIsSubmitting(true);
     setError(null);
 
@@ -94,7 +94,7 @@ export function CreateEventModal({
       className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/80 backdrop-blur-sm overflow-y-auto"
       onClick={onClose}
     >
-      <div 
+      <div
         className="relative w-full max-w-lg rounded-3xl border border-border-subtle bg-surface shadow-2xl p-6 sm:p-8 my-8"
         onClick={(e) => e.stopPropagation()}
       >

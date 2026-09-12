@@ -26,7 +26,7 @@ export function CreatePlanModal({
   const [subject, setSubject] = useState("");
   const [examDate, setExamDate] = useState("");
   const [dailyMinutes, setDailyMinutes] = useState(120);
-  
+
   const [topics, setTopics] = useState<TopicInput[]>([
     {
       id: crypto.randomUUID(),
@@ -37,7 +37,7 @@ export function CreatePlanModal({
       estimated_minutes: 60,
     }
   ]);
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -171,7 +171,7 @@ export function CreatePlanModal({
                 required
               />
             </div>
-            
+
             <div className="space-y-2">
               <label className="text-xs font-bold uppercase tracking-wider text-muted">
                 Exam Date *
@@ -250,7 +250,7 @@ export function CreatePlanModal({
                         required
                       />
                     </div>
-                    
+
                     <div className="space-y-2">
                       <label className="text-[10px] font-bold text-muted uppercase tracking-wider">Difficulty</label>
                       <select

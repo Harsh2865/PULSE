@@ -151,7 +151,7 @@ export default async function ProfilePage() {
                 {badge.unlocked && (
                   <div className="absolute inset-0 bg-gradient-to-br from-success/5 to-transparent pointer-events-none" />
                 )}
-                
+
                 <div className="relative z-10">
                   <div className="flex items-start justify-between gap-3 mb-4">
                     <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-surface-2 text-2xl shadow-inner group-hover:scale-110 transition-transform duration-300">

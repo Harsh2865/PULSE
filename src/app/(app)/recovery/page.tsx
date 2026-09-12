@@ -38,7 +38,7 @@ export default function RecoveryPage() {
       const { data: { user } } = await supabase.auth.getUser();
       if (!user) return;
       setUserId(user.id);
-      
+
       const current = await fetchExamPlan(supabase, user.id);
       if (!current) {
         router.push("/planner");

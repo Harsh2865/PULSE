@@ -27,11 +27,11 @@ export function BottomNav() {
                 {active && (
                   <div className="absolute top-0 h-0.5 w-8 rounded-b-full bg-accent shadow-[0_0_8px_var(--color-accent)] animate-fade-in" />
                 )}
-                <item.icon 
+                <item.icon
                   className={`h-[22px] w-[22px] transition-transform duration-200 ${
                     active ? "scale-110" : "group-hover:scale-110"
-                  }`} 
-                  aria-hidden 
+                  }`}
+                  aria-hidden
                 />
                 <span className="tracking-wide">{item.label}</span>
               </Link>

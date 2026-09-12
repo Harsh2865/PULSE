@@ -30,7 +30,7 @@ export function CreateRecapModal({
       setError("Please provide the course and what was taught.");
       return;
     }
-    
+
     setIsSubmitting(true);
     setError(null);
 

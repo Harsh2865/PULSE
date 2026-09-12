@@ -71,7 +71,7 @@ export async function fetchUserReputation(supabase: SupabaseClient, userId: stri
     else if (action === "EVENT_CONFIRMED" || action === "RECAP_HELPFUL") confirmations_given++;
   }
 
-  const trust_level = 
+  const trust_level =
     score >= 1000 ? "Campus Champion" :
     score >= 500 ? "Trusted Contributor" :
     score >= 100 ? "Active Contributor" : "New Contributor";
