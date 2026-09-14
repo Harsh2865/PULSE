@@ -391,8 +391,9 @@ A useful productivity system should help them recover instead of simply remindin
                          │    PostgreSQL    │
                          │       + RLS      │
                          └──────────────────┘
-                         ---
-                         ## 🧠 Architecture & Design Philosophy
+                                        
+ ```                        
+## 🧠 Architecture & Design Philosophy
 
 The frontend handles the user experience while application logic handles deterministic product rules.
 
